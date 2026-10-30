@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight, ArrowRight } from "lucide-react";
 import { useWebsiteContent } from "./website-content";
 import ServicesMenu from "./services-menu";
+import MobileMenuActions from "./mobile-menu-actions";
 
 const links = [
   { href: "/portfolio", label: "Portfolio" },
@@ -40,7 +41,7 @@ export default function ServicePageHeader() {
         <nav className="desktop-nav" aria-label="Main navigation"><ServicesMenu />{links.map((link) => <a href={link.href} key={link.href}>{link.label}</a>)}</nav>
         <div className="header-actions"><a href="/#estimate" className="button button-blue header-estimate">Request Quote</a><button className="menu-toggle icon-button" aria-expanded={menuOpen} aria-controls="service-mobile-menu" aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button></div>
       </div>
-      {menuOpen && <nav id="service-mobile-menu" className="mobile-menu" aria-label="Mobile navigation"><ServicesMenu />{links.map((link) => <a href={link.href} key={link.href} onClick={() => setMenuOpen(false)}>{link.label}<ArrowUpRight size={18} /></a>)}<a href="/#estimate">Request Quote <ArrowUpRight size={18} /></a></nav>}
+      {menuOpen && <nav id="service-mobile-menu" className="mobile-menu" aria-label="Mobile navigation"><ServicesMenu />{links.map((link) => <a href={link.href} key={link.href} onClick={() => setMenuOpen(false)}>{link.label}<ArrowUpRight size={18} /></a>)}<MobileMenuActions onClose={() => setMenuOpen(false)} /></nav>}
     </header>
   </>;
 }

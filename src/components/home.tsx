@@ -6,6 +6,7 @@ import TeamMemberCard from "./team-member-card";
 import CareersBoard from "./careers-board";
 import SiteFooter from "./site-footer";
 import ServicesMenu from "./services-menu";
+import MobileMenuActions from "./mobile-menu-actions";
 import Dialog from "./dialog";
 import { useQuote } from "./quote-provider";
 import HeroVideo from "./hero-video";
@@ -190,20 +191,7 @@ export default function Home() {
                 <ArrowUpRight size={18} />
               </a>
             ))}
-            <a
-              href="#estimate"
-              aria-haspopup="dialog"
-              onClick={() => setMenuOpen(false)}
-            >
-              Request Quote
-              <ArrowUpRight size={18} />
-            </a>
-            {site.phone && (
-              <a href={`tel:${site.phone}`}>
-                Call Mitch’s
-                <Phone size={18} />
-              </a>
-            )}
+            <MobileMenuActions onClose={() => setMenuOpen(false)} />
           </nav>
         )}
       </header>

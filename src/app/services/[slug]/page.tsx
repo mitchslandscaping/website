@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/site-footer";
 import Image from "next/image";
+import HeroImage from "@/components/hero-image";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, Camera, Trees, Shovel, Fence, Sprout } from "lucide-react";
 import { getWebsiteContent } from "@/lib/website-content";
@@ -18,10 +19,11 @@ const introductions: Record<string, string> = {
   "fencing-access-control": "Privacy, boundaries, and a better way in.",
 };
 const serviceImages: Record<string, { src: string; alt: string; position?: string }> = {
-  "Sports Field Fencing & Backstops": { src: "/images/sports-field-fencing.jpg", alt: "Baseball field with tall backstop netting and perimeter fencing", position: "center 52%" },
-  "Arbor Care": { src: "/images/arbor-care-project.jpg", alt: "Arbor care crew and equipment working beside a tree stump at a commercial property", position: "center 44%" },
-  "Access control": { src: "/images/access-control-project.jpg", alt: "Chain-link sliding entrance gate at a commercial property", position: "center 50%" },
-  "Fencing": { src: "/images/fencing-detail-project.jpg", alt: "Chain-link security fencing around industrial pipework", position: "center 55%" },
+  "Sports Field Fencing & Backstops": { src: "/images/optimized/sports-field-fencing.webp", alt: "Baseball field with tall backstop netting and perimeter fencing", position: "center 52%" },
+  "Landscape Design and Architecture": { src: "/images/optimized/landscape-design-architecture.webp", alt: "Landscape plans, tracing paper, drafting rulers, and planting templates on a design table", position: "center 55%" },
+  "Arbor Care": { src: "/images/optimized/arbor-care-project.webp", alt: "Arbor care crew and equipment working beside a tree stump at a commercial property", position: "center 44%" },
+  "Access control": { src: "/images/optimized/access-control-project.webp", alt: "Chain-link sliding entrance gate at a commercial property", position: "center 50%" },
+  "Fencing": { src: "/images/optimized/fencing-detail-project.webp", alt: "Chain-link security fencing around industrial pipework", position: "center 55%" },
 };
 const anchor = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-$/, "");
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -36,7 +38,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <ServicePageHeader />
       <main id="division-main">
         <section className="division-banner">
-          {group.image && <Image src={group.image} alt={group.alt} fill priority sizes="100vw" />}
+          {group.image && <HeroImage src={group.image} alt={group.alt} />}
           <div className="container">
             <nav aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/#services">Services</a><span>/</span><span>{group.title}</span></nav>
             <h1>{group.title}</h1>

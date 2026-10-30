@@ -1,0 +1,14 @@
+{
+  "/images/optimized/design-build-project.webp": {
+    "srcSet": "/images/optimized/design-build-project-640.webp 640w, /images/optimized/design-build-project-1280.webp 1280w, /images/optimized/design-build-project-1920.webp 1920w, /images/optimized/design-build-project-2400.webp 2400w"
+  },
+  "/images/optimized/construction-project.webp": {
+    "srcSet": "/images/optimized/construction-project-640.webp 640w, /images/optimized/construction-project-1280.webp 1280w, /images/optimized/construction-project-1920.webp 1920w, /images/optimized/construction-project-2400.webp 2400w"
+  },
+  "/images/optimized/fencing-project.webp": {
+    "srcSet": "/images/optimized/fencing-project-640.webp 640w, /images/optimized/fencing-project-1280.webp 1280w, /images/optimized/fencing-project-1920.webp 1920w, /images/optimized/fencing-project-2400.webp 2400w"
+  },
+  "/images/optimized/contact-banner.webp": {
+    "srcSet": "/images/optimized/contact-banner-640.webp 640w, /images/optimized/contact-banner-1280.webp 1280w, /images/optimized/contact-banner-1920.webp 1920w, /images/optimized/contact-banner-2400.webp 2400w"
+  }
+}

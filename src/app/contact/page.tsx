@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import HeroImage from "@/components/hero-image";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import ServicePageHeader from "@/components/service-page-header";
 import SiteFooter from "@/components/site-footer";
@@ -17,7 +17,7 @@ export default async function ContactPage() {
     <ServicePageHeader />
     <main id="contact-main">
       <section className="division-banner contact-banner">
-        <Image src={office.banner.src} alt={office.banner.alt} fill preload sizes="100vw" />
+        <HeroImage src={office.banner.src} alt={office.banner.alt} />
         <div className="container">
           <nav aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Contact</span></nav>
           <h1>Contact us</h1>

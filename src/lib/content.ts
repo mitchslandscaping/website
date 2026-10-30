@@ -114,7 +114,7 @@ export const serviceGroups = [
     label: "PLAN. PLANT. TRANSFORM.",
     title: "Design / Build",
     cardDescription: "Bring your outdoor ideas to life with thoughtful design and planting. From refreshing garden beds to planning a new landscape, we connect your vision with the installation.",
-    image: "/images/design-build-project.jpg",
+    image: "/images/optimized/design-build-project.webp",
     alt: "Lawn installation beside a pool terrace, stone retaining wall, and black metal fence",
     description: "Bring your ideas for your property into focus with landscape design and build services. From refreshing planted areas to planning a new outdoor space, we consider the layout, planting, and way you use your property. Our team helps connect the design with the installation, creating a clear direction from the first conversation through the finished landscape.",
     services: [
@@ -124,7 +124,7 @@ export const serviceGroups = [
           "A considered plan and installation for outdoor spaces that fit how you live and work.",
       },
       {
-        name: "Landscape architecture",
+        name: "Landscape Design and Architecture",
         description:
           "Discuss the layout, planting, and function of your outdoor space with our team.",
       },
@@ -137,7 +137,7 @@ export const serviceGroups = [
     label: "BUILD. IMPROVE. MAKE IT WORK.",
     title: "Construction",
     cardDescription: "Make more of your outdoor space with patios, retaining walls, brickwork, drainage solutions, and sports court surfacing. We’ll plan improvements around your site conditions and how you use your property.",
-    image: "/images/construction-project.jpg",
+    image: "/images/optimized/construction-project.webp",
     alt: "Crew installing a drainage pipe in an excavated trench beside a driveway",
     description:
       "Make your outdoor space more useful with construction shaped around your property. Whether you’re planning a patio, defining an area with retaining walls and brickwork, addressing drainage, or surfacing a tennis or pickleball court, we’ll work through the site conditions and priorities with you. Our team brings these improvements together in a scope that supports how you want to use the space.",
@@ -166,7 +166,7 @@ export const serviceGroups = [
     label: "PRIVACY. SECURITY. ACCESS.",
     title: "Fencing & Access Control",
     cardDescription: "Bring privacy, security, and convenient access to your property. Explore fencing, entry features, and sports field backstops tailored to your site.",
-    image: "/images/fencing-project.jpg",
+    image: "/images/optimized/fencing-project.webp",
     alt: "Driveway entrance gate with stone columns and privacy fencing",
     description: "Define your boundaries and take control of how people enter your property. Our fencing and access control services help address privacy, security, and everyday access for homes and commercial sites, along with fencing and backstops for sports fields. We’ll talk through your goals, the layout of your property, and the entry features you need to find an approach that fits.",
     services: [

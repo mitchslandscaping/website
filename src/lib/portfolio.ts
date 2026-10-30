@@ -26,7 +26,7 @@ export const portfolioProjects: PortfolioProject[] = [
     completed: "September 2026",
     services: ["Backstop installation"],
     photos: [
-      { src: "/images/sports-field-fencing.jpg", alt: "Front view of the completed 35-foot backstop at The Ranch Training Facility" },
+      { src: "/images/optimized/sports-field-fencing.webp", alt: "Front view of the completed 35-foot backstop at The Ranch Training Facility" },
       { src: "/images/ranch-training-facility/img_3435.jpg", alt: "Completed backstop at The Ranch Training Facility viewed from the pitching area" },
       { src: "/images/ranch-training-facility/img_3430.jpg", alt: "Side view of the backstop posts, netting, and support cables" },
       { src: "/images/ranch-training-facility/img_3431.jpg", alt: "Close-up of backstop netting behind home plate" },

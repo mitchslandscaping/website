@@ -267,3 +267,8 @@
 
 /* Match the primary navigation CTA across all action buttons. */
 .button { border-radius: 12px; }
+
+/* Keep the primary mobile links separate from contact actions. */
+.mobile-menu-actions { display: grid; grid-template-columns: 1.5fr 1fr; gap: 10px; border-top: 1px solid var(--line); margin-top: 12px; padding-top: 18px; }
+.mobile-menu-actions .button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 12px 10px; border-radius: 12px; font-size: 14px; }
+.mobile-menu-actions .mobile-call-button { color: var(--blue); background: #eef4ff; }

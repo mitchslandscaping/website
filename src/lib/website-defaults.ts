@@ -5,7 +5,7 @@ import { positions } from './careers';
 export const defaultOffice = {
   street: '13957 E Main St', cityLine: 'Larose, LA 70373', weekdays: 'Monday–Friday', weekdayHours: '9 AM–4 PM', weekend: 'Saturday–Sunday', weekendHours: 'Closed',
   directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=13957+E+Main+St+Larose+LA+70373',
-  banner: { src: '/images/contact-banner.jpg', alt: 'Poolside lawn, mature trees, and ornamental fencing' },
+  banner: { src: '/images/optimized/contact-banner.webp', alt: 'Poolside lawn, mature trees, and ornamental fencing' },
 };
 export const defaultHome = {
   aboutHeading: 'Local roots.\nBuilt around\nyour property.', aboutIntro: 'A familiar name. A team you can count on.',

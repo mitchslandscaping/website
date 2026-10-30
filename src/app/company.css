@@ -387,17 +387,14 @@
 .team-caption p { font-size: 16.25px; color: var(--blue); margin: 0; }
 .team-owner .team-caption p { color: var(--blue); }
 @media (max-width: 760px) {
-  .team-grid { display: grid; grid-template-columns: 1fr; gap: 28px; width: 100%; max-width: none; margin-bottom: 28px; }
-  .team-section > .container { --team-card-width: calc((100cqw - 18px) / 2); }
-  .team-roster { gap: 28px 18px; }
-  .team-roster > .team-member { flex-basis: var(--team-card-width); }
+  .team-section > .container { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; }
+  .team-grid, .team-roster { display: contents; }
   .team-heading { grid-column: 1 / -1; max-width: none; padding: 0; }
-  .team-owner { grid-column: 1 / -1; width: var(--team-card-width); }
+  .team-owner { grid-column: auto; width: 100%; }
+  .team-member { min-width: 0; }
 }
 @media (max-width: 420px) {
-  .team-section > .container { --team-card-width: calc((100cqw - 14px) / 2); }
-  .team-roster { column-gap: 14px; }
-  .team-roster > .team-member { flex-basis: var(--team-card-width); }
+  .team-section > .container { column-gap: 14px; }
   .team-caption h3 { font-size: 18.75px; }
   .team-caption p { font-size: 13.75px; }
 }
