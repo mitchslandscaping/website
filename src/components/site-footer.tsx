@@ -36,7 +36,7 @@ export default function SiteFooter({ home = false }: { home?: boolean }) {
         </div>
         <div className="site-footer-bottom">
           <span>© {new Date().getFullYear()} Mitch’s Landscaping</span>
-          <div><a href={anchor("privacy")}>Privacy</a><a className="site-footer-owner" href="/owner" aria-label="Owner login" title="Owner login"><LockKeyhole size={14} strokeWidth={1.5} aria-hidden="true" /></a></div>
+          <div><a href="/privacy">Privacy</a><a className="site-footer-owner" href="/owner" aria-label="Owner login" title="Owner login"><LockKeyhole size={14} strokeWidth={1.5} aria-hidden="true" /></a></div>
         </div>
       </div>
     </footer>

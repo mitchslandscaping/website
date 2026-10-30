@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   title: "Mitch’s Landscaping | Landscape, Build & Maintain",
   description:
     "Residential and commercial landscaping, lawn care, hardscaping, fencing, and drainage. Start your next outdoor project with a free estimate.",
-  robots: { index: false, follow: false }, // Prototype only. Enable indexing after launch approval.
+  metadataBase: new URL("https://www.mitchlandscaping.com"),
+  robots: { index: true, follow: true },
 };
 export const viewport: Viewport = { themeColor: "#171d20" };
 export default async function RootLayout({
