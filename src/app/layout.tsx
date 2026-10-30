@@ -40,6 +40,18 @@ export default async function RootLayout({
   const owner = preview && await isOwner();
   return (
     <html lang="en">
+      <head><script dangerouslySetInnerHTML={{__html: `
+        (() => {
+          if (location.pathname.startsWith('/owner')) return;
+          const navigation = performance.getEntriesByType('navigation')[0];
+          if (!navigation || navigation.type !== 'reload') return;
+          history.scrollRestoration = 'manual';
+          if (location.hash) history.replaceState(history.state, '', location.pathname + location.search);
+          const top = () => window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+          top();
+          window.addEventListener('pageshow', () => { top(); requestAnimationFrame(top); }, {once: true});
+        })();
+      `}} /></head>
       <body><WebsiteContentProvider content={content}><QuoteProvider>{preview && <EditorPreview owner={owner} />}{children}</QuoteProvider></WebsiteContentProvider></body>
     </html>
   );

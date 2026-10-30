@@ -1,5 +1,6 @@
 import 'server-only';
 import {cache} from 'react';
+import {connection} from 'next/server';
 import {draftMode} from 'next/headers';
 import {unstable_rethrow} from 'next/navigation';
 import {isOwner} from './owner/auth';
@@ -7,6 +8,8 @@ import {contentStore} from './owner/content-store';
 import snapshot from '@/data/website-snapshot.json';
 import type {WebsiteContent} from './website-defaults';
 export const getWebsiteContent=cache(async():Promise<WebsiteContent>=>{
+ // Published content must be read at request time, never frozen during the build.
+ await connection();
  const base=structuredClone(snapshot) as unknown as WebsiteContent;
  if(!process.env.OWNER_DATABASE_URL)return base;
  try{
