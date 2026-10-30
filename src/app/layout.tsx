@@ -27,6 +27,19 @@ export const metadata: Metadata = {
   description:
     "Residential and commercial landscaping, lawn care, hardscaping, fencing, and drainage. Start your next outdoor project with a free estimate.",
   metadataBase: new URL("https://www.mitchlandscaping.com"),
+  openGraph: {
+    type: "website",
+    siteName: "Mitch’s Landscaping",
+    title: "Mitch’s Landscaping | Landscape, Build & Maintain",
+    description: "Landscaping, fencing, and outdoor construction for homes and businesses. Request a free estimate.",
+    images: [{ url: "/images/mitchs-landscaping-share.png", width: 1200, height: 630, alt: "Mitch’s Landscaping logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mitch’s Landscaping | Landscape, Build & Maintain",
+    description: "Landscaping, fencing, and outdoor construction for homes and businesses. Request a free estimate.",
+    images: ["/images/mitchs-landscaping-share.png"],
+  },
   robots: { index: true, follow: true },
 };
 export const viewport: Viewport = { themeColor: "#171d20" };
