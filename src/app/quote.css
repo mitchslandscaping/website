@@ -65,3 +65,14 @@
 .quote-scroll-area::-webkit-scrollbar-thumb { background: #b8bec5; border: 2px solid transparent; background-clip: padding-box; border-radius: 10px; }
 .quote-dialog .dialog-close { position: absolute; top: 14px; right: 18px; float: none; margin: 0; }
 @media (max-width: 700px) { .quote-scroll-area { max-height: 94svh; } }
+
+/* Hosted intake stays inside the existing modal and loads only on request. */
+.quote-fillout-dialog { width: min(1000px, calc(100% - 40px)); padding: 0; background: #fff; }
+.quote-fillout-toolbar { min-height: 64px; display: flex; align-items: center; padding: 14px 76px 14px 24px; border-bottom: 1px solid var(--line, #e1e4e8); }
+.quote-fillout-toolbar a { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--blue); }
+.quote-fillout-frame { display: block; width: 100%; height: min(780px, calc(92svh - 64px)); border: 0; background: #fff; }
+@media (max-width: 700px) {
+  .quote-fillout-dialog { width: calc(100% - 20px); }
+  .quote-fillout-toolbar { padding-left: 16px; }
+  .quote-fillout-frame { height: calc(94svh - 64px); }
+}

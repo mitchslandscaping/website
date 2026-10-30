@@ -2,7 +2,9 @@
 
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import Dialog from "./dialog";
-import QuoteBuilder from "./quote-builder";
+import { ArrowUpRight } from "lucide-react";
+
+const quoteFormUrl = "https://forms.fillout.com/t/npD75Ti9yHus";
 
 const QuoteContext = createContext<{ openQuote: (service?: string) => void } | null>(null);
 export function useQuote() {
@@ -14,11 +16,11 @@ export function useQuote() {
 export default function QuoteProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
-  const [serviceRequest, setServiceRequest] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const openQuote = useCallback((service?: string) => {
     if (service) {
       setSelected(previous => previous.includes(service) ? previous : [...previous.filter(item => item !== "Not sure yet"), service]);
-      setServiceRequest(previous => previous + 1);
+
     }
     setOpen(true);
   }, []);
@@ -30,6 +32,8 @@ export default function QuoteProvider({ children }: { children: ReactNode }) {
     window.addEventListener("hashchange", fromHash);
     return () => window.removeEventListener("hashchange", fromHash);
   }, [openQuote]);
+  const formUrl = new URL(quoteFormUrl);
+  if (selected.length) formUrl.searchParams.set("service", selected.join("; "));
   return <QuoteContext.Provider value={{ openQuote }}>
     <div onClick={event => {
       if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
@@ -41,8 +45,9 @@ export default function QuoteProvider({ children }: { children: ReactNode }) {
         openQuote(url.searchParams.get("service") ?? undefined);
       }
     }}>{children}</div>
-    <Dialog title="Request a free quote" open={open} onClose={() => setOpen(false)} className="quote-dialog">
-      <div className="quote-scroll-area"><QuoteBuilder open={open} serviceRequest={serviceRequest} selected={selected} setSelected={setSelected} onClose={() => setOpen(false)} /></div>
+    <Dialog title="Request a free quote" open={open} onClose={() => setOpen(false)} className="quote-dialog quote-fillout-dialog">
+      <div className="quote-fillout-toolbar"><a href={formUrl.toString()} target="_blank" rel="noopener noreferrer">Open form in a new tab <ArrowUpRight size={14} aria-hidden="true" /></a></div>
+      {(open || loaded) && <iframe src={formUrl.toString()} title="Request a free estimate from Mitch’s Landscaping" className="quote-fillout-frame" onLoad={() => setLoaded(true)} />}
     </Dialog>
   </QuoteContext.Provider>;
 }

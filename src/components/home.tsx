@@ -491,13 +491,13 @@ export default function Home() {
             Application notifications are sent to our company inbox.
           </p>
           <p>
-            The estimate form is still a preview: it does not submit requests or
-            upload selected photos. Estimate entries and photo previews stay in
-            this browser tab and are cleared when you reload or close it.
+            Quote requests are processed and stored through Fillout. Your contact
+            information, property details, and optional photos are shared with
+            Mitch’s Landscaping to review and respond to your request.
           </p>
           <p>
             Links to Google open an external website with its own privacy
-            practices. You can review <a href="https://www.fillout.com/privacy" target="_blank" rel="noopener noreferrer">Fillout’s privacy policy</a> or email <a href={`mailto:${site.email}`}>{site.email}</a> with questions about your application information.
+            practices. You can review <a href="https://www.fillout.com/privacy" target="_blank" rel="noopener noreferrer">Fillout’s privacy policy</a> or email <a href={`mailto:${site.email}`}>{site.email}</a> with questions about your submitted information.
           </p>
           <button className="button button-blue" onClick={() => setModal(null)}>
             Got it
