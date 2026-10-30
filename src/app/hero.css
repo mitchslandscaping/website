@@ -233,6 +233,8 @@
   .landing-hero-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
+    position: relative;
+    top: 24px;
   }
   .landing-hero-label {
     font-size: 9px;
@@ -240,7 +242,7 @@
     padding: 8px 12px;
   }
   .landing-hero h1 {
-    font-size: clamp(32px, 8.7vw, 55px);
+    font-size: clamp(32px, 10.2vw, 64px);
   }
   .landing-hero-description {
     font-size: 15px;
