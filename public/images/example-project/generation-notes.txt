@@ -1,0 +1,18 @@
+Generated with the built-in image_gen tool. Fictional example project; not photographs of Mitch's work.
+
+BACKYARD
+Use case: photorealistic-natural. Create a realistic landscape contractor portfolio photograph of a fictional Louisiana suburban backyard: modest white brick single-story house, a rectangular light gray paver patio with simple teak outdoor seating, curved freshly mulched planting beds with dwarf yaupon hollies, liriope and white flowering shrubs, neat green lawn, wood privacy fence. Wide horizontal editorial photography, natural afternoon light, eye-level view showing the finished patio and planting together. Attainable professional residential landscaping, not a luxury resort. No people, text, logos, house numbers or watermark.
+
+PLANTING
+Use case: photorealistic-natural. Realistic landscape contractor portfolio detail photograph of a fictional Louisiana backyard, close view of curved fresh brown mulch planting bed bordering neat green lawn and light gray rectangular paver patio, dwarf yaupon hollies, liriope, white flowering shrubs. A modest white brick house and teak outdoor chairs softly visible behind. Natural afternoon sunlight, horizontal photograph, believable attainable landscaping, no people, text, logos or watermark.
+
+PATIO
+Use case: photorealistic-natural. Realistic landscape contractor portfolio photograph, medium view across a light gray rectangular paver patio with simple teak chairs in a fictional Louisiana suburban backyard. White brick single-story house on one side, wood privacy fence behind, neat green lawn and curved mulched beds with dwarf yaupon hollies, liriope and white flowers. Natural afternoon sunlight, horizontal photo focused on paving and seating, no people, text, logos or watermark.
+
+2026-10-29 — Built-in image_gen, reference backyard.png.
+Output garden-edge.png. Prompt: Create one photorealistic landscape portfolio detail photo from this reference fictional backyard. Close low angle of the curved dark mulch bed edge against green lawn, purple liriope flowers and round evergreen shrubs, pale gray patio softly behind. Match reference plants and warm natural daylight. Landscape 3:2 photograph, no text, no people. Reference is scene continuity guidance.
+Output patio-view.png. Prompt: Create one photorealistic landscape portfolio photo of this same fictional backyard from a new close angle on its pale gray paver patio. Show natural wood outdoor chair with beige cushions, low wooden coffee table, with the lush lawn and curved planting beds beyond. Match the reference furniture, plants, warm afternoon light. Landscape 3:2, no text, no people. Reference is scene continuity guidance.
+
+2026-10-29 — Built-in image_gen, reference backyard.png.
+Output paver-detail.png. Prompt: Use reference as continuity for a fictional landscape portfolio. Generate a natural photorealistic 3:2 photo showing a close detail of the pale gray rectangular pavers meeting neat green lawn and dark mulch with liriope and boxwood. Low oblique viewpoint, warm afternoon sunlight, same materials as reference, no text or people.
+Output garden-border.png. Prompt: Use reference as continuity for a fictional landscape portfolio. Generate a natural photorealistic 3:2 photograph of the white flowering hydrangeas, round boxwood shrubs, and ornamental tree along the wood privacy fence at the left of this backyard. Lawn in foreground, warm afternoon light, no text or people.

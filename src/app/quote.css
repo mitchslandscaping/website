@@ -1,0 +1,67 @@
+/* Focused quote intake, shared by all entry points. */
+.quote-dialog { width: min(860px, calc(100% - 40px)); border-radius: 24px; background: var(--surface); }
+.quote-shell { display: block; }
+.quote-header { padding: 30px 40px 0; background: var(--paper); border-bottom: 1px solid #e4e9ef; }
+.quote-brand { display: flex; align-items: center; gap: 20px; padding-right: 30px; }
+.quote-brand .eyebrow { margin: 0; color: var(--blue); font-size: 12px; }
+.quote-brand > span:last-child { color: #68717d; font-size: 12px; }
+.quote-header-title { font-size: 25px; font-weight: 700; letter-spacing: -.04em; margin: 14px 0 24px; }
+.quote-progress { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 0; }
+.quote-progress li { color: #747c88; font-size: 12px; font-weight: 500; padding-bottom: 20px; border-bottom: 3px solid transparent; gap: 9px; }
+.quote-progress li > span { width: 28px; height: 28px; flex-shrink: 0; border-color: #d8dfe8; background: white; color: #657082; }
+.quote-progress .current, .quote-progress .complete { color: #174fa9; border-bottom-color: var(--blue); }
+.quote-progress .current > span, .quote-progress .complete > span { color: white; }
+.quote-main { padding: 30px 40px 24px; }
+.quote-step-label { margin-bottom: 10px; }
+.quote-step-label span { border-radius: 4px; font-size: 10px; }
+.quote-main h2 { font-size: clamp(25px, 3vw, 32px); }
+.quote-description { font-size: 14px; margin: 10px 0 24px; }
+.quote-division-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.quote-service-group { margin: 0; padding: 18px; border: 1px solid #e0e5ec; border-radius: 14px; transition: border-color .15s; }
+.quote-service-group:has(.chosen) { border-color: #83aef2; background: #fbfdff; }
+.quote-service-group h3 { display: flex; align-items: center; gap: 10px; font-size: 15px; margin-bottom: 13px; }
+.quote-service-group h3 svg { color: var(--blue); flex-shrink: 0; }
+.quote-choices { grid-template-columns: 1fr; gap: 2px; }
+.quote-choices label { border: 0; padding: 8px 6px; min-height: 40px; font-size: 12px; border-radius: 6px; }
+.quote-choices input { position: static; opacity: 1; width: 17px; height: 17px; accent-color: var(--blue); flex-shrink: 0; }
+.quote-choices label > svg { display: none; }
+.quote-choices .chosen { background: #edf4ff; }
+.quote-unsure { margin-top: 16px; padding: 15px 18px; background: var(--paper); border-radius: 10px; font-size: 13px; }
+.quote-fields > label, .property-choice legend { font-size: 14px; }
+.quote-fields input:not([type="radio"]):not([type="file"]), .quote-fields textarea { border-radius: 9px; font-size: 16px; min-height: 48px; }
+.quote-fields input:focus-visible, .quote-fields textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.property-choice label { border-radius: 10px; font-size: 14px; min-height: 58px; }
+.quote-upload .photo-dropzone { border-radius: 10px; background: var(--paper); }
+.quote-summary { border-radius: 12px; padding: 20px; background: var(--paper); overflow-wrap: anywhere; }
+.quote-summary p { line-height: 1.6; }
+.quote-controls { padding-top: 22px; margin-top: 24px; border-top: 1px solid #e4e9ef; }
+.quote-controls .button { border-radius: 10px; min-height: 50px; padding: 14px 24px; font-size: 14px; }
+.quote-free { font-size: 12px; }
+.quote-privacy { margin-top: 18px; }
+.quote-success { padding: 12px 0; }
+@media (max-width: 600px) {
+  .quote-dialog { width: calc(100% - 20px); max-height: 94svh; border-radius: 18px; }
+  .quote-header { padding: 24px 20px 0; }
+  .quote-brand { display: block; }
+  .quote-brand > span:last-child { display: block; margin-top: 6px; font-size: 11px; }
+  .quote-header-title { font-size: 22px; margin: 14px 0 20px; }
+  .quote-progress { gap: 8px; }
+  .quote-progress li { flex-direction: row; gap: 6px; font-size: 10px; padding-bottom: 14px; }
+  .quote-progress li > span { width: 22px; height: 22px; font-size: 10px; }
+  .quote-main { padding: 24px 20px 20px; }
+  .quote-division-grid { grid-template-columns: 1fr; gap: 12px; }
+  .quote-service-group { padding: 16px; }
+  .quote-choices label { font-size: 13px; min-height: 44px; }
+  .quote-controls .button { padding: 13px 16px; font-size: 13px; }
+  .quote-free { max-width: 100px; font-size: 11px; }
+  .quote-step-label { flex-direction: row; }
+}
+
+/* Clip the scrolling form inside the dialog's rounded outer frame. */
+.quote-dialog { overflow: hidden; }
+.quote-scroll-area { max-height: 92svh; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #b8bec5 transparent; }
+.quote-scroll-area::-webkit-scrollbar { width: 8px; }
+.quote-scroll-area::-webkit-scrollbar-track { background: transparent; margin-block: 24px; }
+.quote-scroll-area::-webkit-scrollbar-thumb { background: #b8bec5; border: 2px solid transparent; background-clip: padding-box; border-radius: 10px; }
+.quote-dialog .dialog-close { position: absolute; top: 14px; right: 18px; float: none; margin: 0; }
+@media (max-width: 700px) { .quote-scroll-area { max-height: 94svh; } }

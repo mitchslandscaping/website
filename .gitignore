@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.tsbuildinfo
+.DS_Store
+qa/
+.owner/
+
+# Local preparation, hosting credentials, and private backups
+tmp/
+.vercel/
+.openai/
+backups/
+*.log
