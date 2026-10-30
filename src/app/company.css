@@ -838,7 +838,7 @@
 .contact-hours dt { white-space: nowrap; }
 .contact-hours dd { margin: 0; }
 .contact-methods { align-self: center; }
-@media(max-width:380px) { .contact-office-details { grid-template-columns: 1fr; } }
+@media(max-width:600px) { .contact-office-details { grid-template-columns: 1fr; } }
 .contact-method { display: grid; grid-template-columns: 24px minmax(0, 1fr) 22px; gap: 22px; align-items: center; border-bottom: 1px solid #e1e4e8; padding: 34px 0; color: var(--ink); }
 .contact-method:first-child { padding-top: 0; }
 .contact-method-icon { color: var(--blue); }
