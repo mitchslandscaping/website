@@ -188,7 +188,6 @@ export default function Home() {
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-                <ArrowUpRight size={18} />
               </a>
             ))}
             <MobileMenuActions onClose={() => setMenuOpen(false)} />

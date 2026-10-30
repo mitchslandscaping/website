@@ -269,6 +269,15 @@
 .button { border-radius: 12px; }
 
 /* Keep the primary mobile links separate from contact actions. */
-.mobile-menu-actions { display: grid; grid-template-columns: 1.5fr 1fr; gap: 10px; border-top: 1px solid var(--line); margin-top: 12px; padding-top: 18px; }
+.mobile-menu-actions { display: grid; grid-template-columns: 1fr 1.5fr; gap: 10px; border-top: 1px solid var(--line); margin-top: 12px; padding-top: 18px; }
 .mobile-menu-actions .button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 12px 10px; border-radius: 12px; font-size: 14px; }
 .mobile-menu-actions .mobile-call-button { color: var(--blue); background: #eef4ff; }
+
+@media (max-width: 1024px) {
+  .mobile-menu { padding: 12px 24px 24px; }
+  .mobile-menu > a, .mobile-menu .services-menu-trigger > a { min-height: 52px; padding: 14px 0; font-size: 16px; font-weight: 500; align-items: center; }
+  .mobile-menu .services-menu-trigger { gap: 0; min-height: 52px; }
+  .mobile-menu .services-menu-trigger button { flex: 0 0 32px; width: 32px; }
+  .mobile-menu .services-menu-links { border: 0; border-left: 2px solid var(--line); border-radius: 0; padding: 0 0 0 12px; margin: 0 0 8px; }
+  .mobile-menu-actions { margin-top: 10px; }
+}
