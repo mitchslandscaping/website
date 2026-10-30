@@ -1,6 +1,6 @@
 # Mitch’s Landscaping website
 
-Next.js website with Sanity visual editing and a shared Fillout employment application.
+Next.js website with a private passkey owner editor, restricted Neon content storage, and shared Fillout forms.
 
 ## Run locally
 
@@ -13,7 +13,7 @@ Open http://127.0.0.1:3000. The local server must stay running. The site has not
 
 ## Owner editing
 
-Open http://localhost:3000/owner or click the footer lock. The owner area lives on Mitch’s website and contains only **Team**, **Portfolio**, and **Careers**. Sanity stores the public content behind the scenes; the owner does not need to open its interface.
+Open http://localhost:3000/owner or click the footer lock. The owner area lives on Mitch’s website and contains only **Team**, **Portfolio**, and **Careers**. Neon stores Team, Portfolio, Careers, and new photo uploads. Fixed page content and existing media ship with the website; Sanity is no longer used.
 
 ### First-time local setup
 
@@ -31,25 +31,37 @@ Development uses **http://localhost:3000/owner**. A localhost passkey will not w
 
 **Save draft** stores changes privately. **Preview** saves unsaved work as a draft before showing the website; use Back to owner area to continue. **Publish changes** asks for confirmation and updates the public website. A revision conflict asks the owner to reload rather than overwrite newer changes. The owner API cannot edit fixed page copy, service divisions, company settings, or the layout. Other changes go through the developer.
 
-Images must be JPG, PNG, or WebP, up to 10 MB each. Team members and project photos can be removed from their lists without deleting the underlying media asset. Portfolios and openings can be hidden/closed without deleting their documents.
+Images must be JPG, PNG, or WebP, up to 10 MB each. They are resized without cropping to at most 2400 pixels, stripped of metadata, and stored as WebP (at most 1 MB each). New-upload storage is capped at 200 MB; existing bundled photos do not count toward this limit. Team members and project photos can be removed from their lists without deleting the underlying media asset. Portfolios and openings can be hidden/closed without deleting their documents.
 
 ### Private configuration and deployment
 
-Copy `.env.example` when setting up another environment. The public Sanity project is `kjf580ay`, dataset `production`.
+Copy `.env.example` when setting up another environment. Only the private database connection and final owner origin are needed.
 
-- `SANITY_API_WRITE_TOKEN`: private editor token for server-side writes and image uploads. Without it the owner area is read-only. No personal CLI login token is used by the website.
-- `SANITY_API_READ_TOKEN`: server-only viewer token for unpublished previews.
 - `OWNER_DATABASE_URL`: restricted TLS Postgres connection for Vercel. Apply `database/owner-auth.sql` using the operator-only `npm run owner:db:init` command, seed its owner identifier, and provision the restricted runtime grants listed in the migration. Keep the administrator connection out of Vercel runtime variables. The same one-credential rule, one-use challenges, revocable sessions, and durable throttling work across serverless instances. Never share a production auth database with preview deployments.
 - `OWNER_AUTH_DB`: standalone-server alternative; absolute SQLite database path on a persistent, private volume. Production fails closed when no storage is configured. Vercel explicitly rejects SQLite fallback. Use Node 26 with `node:sqlite`, one standalone server or processes sharing the same local durable database, and restrictive filesystem access. This storage contains the public credential, one-use challenges, rate limits, and hashed session tokens; it does not contain the private passkey. It is not suitable for independent serverless instances or network filesystems. Choose suitable hosting before launch; do not copy a development database to a different hostname.
 - `OWNER_SITE_ORIGIN`: the exact HTTPS production origin. This is also the WebAuthn relying-party hostname; no wildcard, parent-domain, or client-supplied origin is accepted. Production must set it before enrollment.
 
 User verification is required during enrollment and every sign-in. Challenges expire after five minutes and are consumed once. A unique database constraint allows only one credential, and the setup invitation is consumed in the same transaction. Sessions use random, server-revocable tokens hashed in private storage, HttpOnly and SameSite Strict cookies, a one-hour absolute expiry, and Secure `__Host-` cookies in production. Signing out revokes the session and clears draft-preview cookies. All new sign-in/setup ceremonies are limited to ten per 15 minutes in durable storage (shared single-owner limit; edge/WAF limits are still recommended before launch). Owner pages reject framing and use no-store/no-referrer headers.
 
-**Publishing is intentionally not activated.** Before enabling it, finish scoped content credentials, content backups and restore testing, production HTTPS/domain/storage setup, and an independent security review. Authentication alone does not provide backups or protect against a compromised server/device. Server access and deployment credentials remain separate from owner access. Do not issue a broad Sanity write token as a shortcut.
+### Content storage and recovery
 
-The local Sanity Studio remains available to the developer at `/studio`, with its restricted content schema; owner-facing links use `/owner`. Add the exact deployed origin to Sanity CORS if using the developer Studio there.
+Apply `database/owner-content-install.sql` as the database administrator once, then deploy. It seeds missing content only and never replaces an existing record. The runtime role can SELECT/INSERT/UPDATE only the editable records, and SELECT/INSERT photo bytes. It cannot delete records, change schema, or write/erase revision history. Database triggers record every saved version. The fixed website configuration lives in `src/data/website-snapshot.json` and is never written by the owner API.
 
-Initial public website content was imported with `sanity exec scripts/seed-sanity.ts --with-user-token`. The import creates missing documents only. Local files in `src/lib` remain startup fallbacks if Sanity cannot be reached. Applicant data is not stored in Sanity or the owner area.
+The operator-only backup tool includes published records, drafts, history, and uploaded photos. Keep its administrative connection out of the website environment and its backup outside Git/public folders:
+
+```sh
+# Supply OWNER_BACKUP_DATABASE_URL securely in the operator's environment.
+node scripts/owner-content-backup.mjs export backups/content-backup.json
+node scripts/owner-content-backup.mjs restore backups/content-backup.json
+# Only after reviewing the checksum check and intended destination:
+node scripts/owner-content-backup.mjs restore backups/content-backup.json --apply
+```
+
+Restore replaces records present in the backup with new revision identifiers. Records created later and existing audit history are retained; authentication records are never touched. A history revision can also be restored by a trusted database operator. The website account cannot modify the history table. This protects against mistakes or stolen owner access, but not against compromise of the database administrator account. Keep periodic independent exports; scheduled offsite backup is not configured by this migration.
+
+`src/data/website-snapshot.json` and bundled images preserve the pre-migration public site as a fallback during database unavailability. That fallback is not a backup of later owner edits. Private uploads require owner authentication until referenced by published content; media responses are not cached publicly. Preview requires a valid owner session.
+
+Validation: `test:owner:content` verifies database permissions, concurrent saves, draft/media isolation, and an export/restore round trip. `test:owner:content:http` verifies the actual editor API with disposable local data. Set `OWNER_QA_POSTGRES_URL` to a disposable loopback Postgres database only. Tests create and remove their own schemas and runtime role; never point them at production.
 
 ## Forms
 

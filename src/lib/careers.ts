@@ -1,4 +1,3 @@
-import { stegaClean } from 'next-sanity';
 
 export type Position = {
   id: string;
@@ -16,6 +15,6 @@ export const positions: Position[] = [
 
 export function applicationUrl(position: Position) {
   const url = new URL(applicationFormUrl);
-  url.searchParams.set("position", stegaClean(position.title));
+  url.searchParams.set("position", position.title);
   return url.toString();
 }

@@ -1,0 +1,865 @@
+{
+  "site": {
+    "aboutPhoto": {
+      "alt": "",
+      "isStock": false,
+      "position": "50% 60%",
+      "src": ""
+    },
+    "announcement": {
+      "action": "Fencing by Mitch’s.",
+      "enabled": true,
+      "message": "Privacy. Security. Curb appeal.",
+      "service": "Fencing"
+    },
+    "email": "contact@mitchlandscaping.com",
+    "googleBusinessUrl": "https://share.google/A2zeRekIZVP2YXKMN",
+    "hero": {
+      "description": "From keeping your grounds looking their best to building what comes next. Landscaping, fencing, and outdoor construction for homes and businesses.",
+      "headline": [
+        "Landscape.",
+        "Fencing.",
+        "Construction."
+      ],
+      "image": "/images/rollout-v7-poster.jpg",
+      "label": "RESIDENTIAL & COMMERCIAL",
+      "note": "Free estimates. Let’s talk about your property.",
+      "video": "/videos/rollout-hero-v7.mp4"
+    },
+    "logo": "/images/mitchs-logo.svg",
+    "name": "Mitch’s Landscaping",
+    "phone": "(985) 693-6354",
+    "reviews": [
+      {
+        "_key": "item-0",
+        "_type": "object",
+        "author": "Marvin Autin",
+        "quote": "Mitch is honest and professional."
+      },
+      {
+        "_key": "item-1",
+        "_type": "object",
+        "author": "John Stevison",
+        "quote": "Mr. Mitch is a good man and a great landscaper"
+      },
+      {
+        "_key": "item-2",
+        "_type": "object",
+        "author": "Robert Lilley",
+        "quote": "Knowledgeable, friendly and efficient."
+      }
+    ],
+    "serviceAreas": [],
+    "story": "Mitch’s has been part of this community since 1989. From the grounds you care for every day to the improvements you’ve been planning, we’re here to help you take the next step.",
+    "team": [
+      {
+        "_key": "item-0",
+        "_type": "teamMember",
+        "active": true,
+        "name": "Mitch Pitre",
+        "photo": "",
+        "role": "Owner"
+      },
+      {
+        "_key": "item-1",
+        "_type": "teamMember",
+        "active": true,
+        "name": "Marcelle Pate",
+        "photo": "",
+        "role": "Landscape Designer"
+      },
+      {
+        "_key": "item-2",
+        "_type": "teamMember",
+        "active": true,
+        "name": "Kieran Pate",
+        "photo": "",
+        "role": "Operations Manager"
+      },
+      {
+        "_key": "item-3",
+        "_type": "teamMember",
+        "active": true,
+        "name": "Makenzie Hebert",
+        "photo": "",
+        "role": "Office Administrator"
+      }
+    ],
+    "trustedBy": {
+      "enabled": true,
+      "heading": "Trusted by businesses in our community",
+      "logos": [
+        {
+          "_key": "item-0",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 2229,
+            "sourceHeight": 2477,
+            "sourceWidth": 2550,
+            "width": 2431,
+            "x": 79,
+            "y": 143
+          },
+          "id": "cts",
+          "image": "/images/client-cts.png",
+          "name": "CTS"
+        },
+        {
+          "_key": "item-1",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 213,
+            "sourceHeight": 250,
+            "sourceWidth": 600,
+            "width": 566,
+            "x": 17,
+            "y": 21
+          },
+          "id": "nov",
+          "image": "/images/client-nov.png",
+          "lightBackground": true,
+          "name": "NOV"
+        },
+        {
+          "_key": "item-2",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 256,
+            "sourceHeight": 256,
+            "sourceWidth": 900,
+            "width": 900,
+            "x": 0,
+            "y": 0
+          },
+          "id": "gobears",
+          "image": "/images/client-gobears.png",
+          "lightBackground": false,
+          "name": "GoBears"
+        },
+        {
+          "_key": "item-3",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 160,
+            "sourceHeight": 294,
+            "sourceWidth": 495,
+            "width": 314,
+            "x": 90,
+            "y": 20
+          },
+          "id": "let",
+          "image": "/images/client-let.png",
+          "lightBackground": false,
+          "lightMark": true,
+          "name": "Louisiana Environmental Transportation"
+        },
+        {
+          "_key": "item-4",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 71,
+            "sourceHeight": 235,
+            "sourceWidth": 420,
+            "width": 377,
+            "x": 21,
+            "y": 80
+          },
+          "id": "chase",
+          "image": "/images/client-chase.png",
+          "lightBackground": true,
+          "name": "Chase"
+        },
+        {
+          "_key": "item-5",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 427,
+            "sourceHeight": 463,
+            "sourceWidth": 1280,
+            "width": 1255,
+            "x": 15,
+            "y": 20
+          },
+          "id": "republic",
+          "image": "/images/client-republic.png",
+          "lightBackground": false,
+          "name": "Republic Services"
+        },
+        {
+          "_key": "item-6",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 302,
+            "sourceHeight": 1050,
+            "sourceWidth": 2100,
+            "width": 1550,
+            "x": 275,
+            "y": 374
+          },
+          "id": "advance",
+          "image": "/images/client-advance-hd.png",
+          "lightBackground": false,
+          "lightMark": true,
+          "name": "Advance Auto Parts"
+        },
+        {
+          "_key": "item-7",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 407,
+            "sourceHeight": 407,
+            "sourceWidth": 2000,
+            "width": 2000,
+            "x": 0,
+            "y": 0
+          },
+          "id": "physiofit",
+          "image": "/images/client-physiofit-official.png",
+          "lightBackground": false,
+          "lightMark": true,
+          "name": "Physiofit"
+        },
+        {
+          "_key": "item-8",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 98,
+            "sourceHeight": 400,
+            "sourceWidth": 400,
+            "width": 376,
+            "x": 18,
+            "y": 155
+          },
+          "id": "cvs",
+          "image": "/images/client-cvs.png",
+          "lightBackground": true,
+          "name": "CVS"
+        },
+        {
+          "_key": "item-9",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 326,
+            "sourceHeight": 1600,
+            "sourceWidth": 2823,
+            "width": 2591,
+            "x": 116,
+            "y": 637
+          },
+          "id": "autozone",
+          "image": "/images/client-autozone.png",
+          "lightBackground": true,
+          "name": "AutoZone"
+        },
+        {
+          "_key": "item-10",
+          "_type": "customerLogo",
+          "clipPath": "polygon(0 0, 100% 0, 100% 100%, 46% 100%, 46% 88%, 0 88%)",
+          "crop": {
+            "height": 180,
+            "sourceHeight": 230,
+            "sourceWidth": 1257,
+            "width": 1243,
+            "x": 8,
+            "y": 9
+          },
+          "id": "miswaco",
+          "image": "/images/client-miswaco.png",
+          "lightBackground": true,
+          "name": "M-I SWACO"
+        },
+        {
+          "_key": "item-11",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 118,
+            "sourceHeight": 1200,
+            "sourceWidth": 1920,
+            "width": 1661,
+            "x": 131,
+            "y": 533
+          },
+          "id": "halliburton",
+          "image": "/images/client-halliburton-hd.png",
+          "lightMark": true,
+          "name": "Halliburton"
+        },
+        {
+          "_key": "item-12",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 65,
+            "sourceHeight": 378,
+            "sourceWidth": 529,
+            "width": 419,
+            "x": 55,
+            "y": 11
+          },
+          "id": "scurlock",
+          "image": "/images/client-scurlock.png",
+          "lightBackground": true,
+          "name": "Scurlock Electric"
+        },
+        {
+          "_key": "item-13",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 721,
+            "sourceHeight": 722,
+            "sourceWidth": 1200,
+            "width": 1200,
+            "x": 0,
+            "y": 0
+          },
+          "id": "lafourche",
+          "image": "/images/client-lafourche.png",
+          "name": "Lafourche Parish Public Schools"
+        },
+        {
+          "_key": "item-14",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 163,
+            "sourceHeight": 447,
+            "sourceWidth": 447,
+            "width": 371,
+            "x": 38,
+            "y": 142
+          },
+          "id": "blfwd",
+          "image": "/images/client-blfwd.png",
+          "lightBackground": true,
+          "lightMark": false,
+          "name": "Bayou Lafourche Fresh Water District"
+        },
+        {
+          "_key": "item-15",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 145,
+            "sourceHeight": 205,
+            "sourceWidth": 800,
+            "width": 751,
+            "x": 23,
+            "y": 30
+          },
+          "id": "sealevel",
+          "image": "/images/client-sealevel.png",
+          "lightBackground": false,
+          "lightMark": true,
+          "name": "Sealevel Construction"
+        },
+        {
+          "_key": "item-16",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 128,
+            "sourceHeight": 630,
+            "sourceWidth": 1200,
+            "width": 985,
+            "x": 100,
+            "y": 260
+          },
+          "id": "chouest",
+          "image": "/images/client-chouest.png",
+          "lightBackground": true,
+          "lightMark": false,
+          "name": "Chouest Group"
+        },
+        {
+          "_key": "item-17",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 418,
+            "sourceHeight": 418,
+            "sourceWidth": 640,
+            "width": 640,
+            "x": 0,
+            "y": 0
+          },
+          "id": "intermoor",
+          "image": "/images/client-intermoor.png",
+          "lightBackground": true,
+          "name": "InterMoor"
+        },
+        {
+          "_key": "item-18",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 318,
+            "sourceHeight": 630,
+            "sourceWidth": 1200,
+            "width": 773,
+            "x": 212,
+            "y": 154
+          },
+          "id": "joes-septic",
+          "image": "/images/client-joes-septic.png",
+          "lightBackground": true,
+          "name": "Joe’s Septic Contractors"
+        },
+        {
+          "_key": "item-19",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 68,
+            "sourceHeight": 68,
+            "sourceWidth": 127,
+            "width": 127,
+            "x": 0,
+            "y": 0
+          },
+          "id": "loop",
+          "image": "/images/client-loop-official.png",
+          "name": "LOOP LLC"
+        },
+        {
+          "_key": "item-20",
+          "_type": "customerLogo",
+          "crop": {
+            "height": 213,
+            "sourceHeight": 213,
+            "sourceWidth": 800,
+            "width": 794,
+            "x": 3,
+            "y": 0
+          },
+          "id": "freetown",
+          "image": "/images/client-freetown.png",
+          "lightBackground": true,
+          "name": "Freetown Builders"
+        }
+      ]
+    }
+  },
+  "office": {
+    "banner": {
+      "alt": "Poolside lawn, mature trees, and ornamental fencing",
+      "src": "/images/contact-banner.jpg"
+    },
+    "cityLine": "Larose, LA 70373",
+    "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=13957+E+Main+St+Larose+LA+70373",
+    "street": "13957 E Main St",
+    "weekdayHours": "9 AM–4 PM",
+    "weekdays": "Monday–Friday",
+    "weekend": "Saturday–Sunday",
+    "weekendHours": "Closed"
+  },
+  "home": {
+    "aboutDetail": "Landscaping, fencing, or construction—it starts with a conversation about your property and what you need from it.",
+    "aboutHeading": "Local roots.\nBuilt around\nyour property.",
+    "aboutIntro": "A familiar name. A team you can count on.",
+    "careersHeading": "Build a career with Mitch’s.",
+    "careersIntro": "Join our team and help maintain the outdoor spaces our community calls home.",
+    "closingHeading": "Let’s make more of your outdoor space.",
+    "closingIntro": "Start with a few details about your property. We’ll help you take the next step, with a free estimate for the work you have in mind.",
+    "portfolioHeading": "Portfolio",
+    "portfolioIntro": "A closer look at our work. Project stories and photos are coming soon.",
+    "responseNote": "We aim to respond the same day or next business day.",
+    "servicesHeading": "The right services. All in one place.",
+    "servicesIntro": "From everyday upkeep to your next big project, one team for the work your property needs.",
+    "teamHeading": "The people behind your project.",
+    "teamIntro": "Meet the team coordinating your plans, schedules, and next steps."
+  },
+  "serviceGroups": [
+    {
+      "_id": "division-maintenance",
+      "_type": "serviceDivision",
+      "alt": "",
+      "cardDescription": "Keep your property neat and welcoming with lawn care, landscape upkeep, arbor care, and herbicide treatments. We’ll tailor a maintenance plan to your property’s needs.",
+      "description": "Keep your property looking cared for throughout the seasons. Our maintenance services bring lawn care, landscape upkeep, arbor care, and herbicide treatments together, helping you manage everyday growth and keep your outdoor spaces neat and welcoming. We’ll discuss your property’s needs and put together a scope of care that fits.",
+      "id": "landscaping",
+      "image": "",
+      "introHeading": "Property care that keeps things looking their best.",
+      "label": "CARE. TRIM. MAINTAIN.",
+      "number": "01",
+      "order": 0,
+      "services": [
+        {
+          "_key": "item-0",
+          "_type": "divisionService",
+          "description": "Routine lawn care to keep your property neat, welcoming, and ready to enjoy.",
+          "name": "Lawn maintenance"
+        },
+        {
+          "_key": "item-1",
+          "_type": "divisionService",
+          "description": "Seasonal upkeep and care for the planted spaces that frame your property.",
+          "name": "Landscape maintenance"
+        },
+        {
+          "_key": "item-2",
+          "_type": "divisionService",
+          "alt": "Arbor care crew and equipment working beside a tree stump at a commercial property",
+          "description": "Care for the trees on your property, with a scope of work tailored to your landscape and priorities.",
+          "image": "/images/arbor-care-project.jpg",
+          "name": "Arbor Care",
+          "position": "center 44%"
+        },
+        {
+          "_key": "item-3",
+          "_type": "divisionService",
+          "description": "Tell us about unwanted growth so we can discuss an appropriate treatment plan.",
+          "name": "Herbicide treatments"
+        }
+      ],
+      "slug": "maintenance",
+      "title": "Maintenance Services"
+    },
+    {
+      "_id": "division-design-build",
+      "_type": "serviceDivision",
+      "alt": "Lawn installation beside a pool terrace, stone retaining wall, and black metal fence",
+      "cardDescription": "Bring your outdoor ideas to life with thoughtful design and planting. From refreshing garden beds to planning a new landscape, we connect your vision with the installation.",
+      "description": "Bring your ideas for your property into focus with landscape design and build services. From refreshing planted areas to planning a new outdoor space, we consider the layout, planting, and way you use your property. Our team helps connect the design with the installation, creating a clear direction from the first conversation through the finished landscape.",
+      "id": "landscape-design",
+      "image": "/images/design-build-project.jpg",
+      "introHeading": "Thoughtful design. Outdoor spaces to enjoy.",
+      "label": "PLAN. PLANT. TRANSFORM.",
+      "number": "02",
+      "order": 1,
+      "services": [
+        {
+          "_key": "item-0",
+          "_type": "divisionService",
+          "description": "A considered plan and installation for outdoor spaces that fit how you live and work.",
+          "name": "Landscape design / build"
+        },
+        {
+          "_key": "item-1",
+          "_type": "divisionService",
+          "description": "Discuss the layout, planting, and function of your outdoor space with our team.",
+          "name": "Landscape architecture"
+        }
+      ],
+      "slug": "design-build",
+      "title": "Design / Build"
+    },
+    {
+      "_id": "division-construction",
+      "_type": "serviceDivision",
+      "alt": "Crew installing a drainage pipe in an excavated trench beside a driveway",
+      "cardDescription": "Make more of your outdoor space with patios, retaining walls, brickwork, drainage solutions, and sports court surfacing. We’ll plan improvements around your site conditions and how you use your property.",
+      "description": "Make your outdoor space more useful with construction shaped around your property. Whether you’re planning a patio, defining an area with retaining walls and brickwork, addressing drainage, or surfacing a tennis or pickleball court, we’ll work through the site conditions and priorities with you. Our team brings these improvements together in a scope that supports how you want to use the space.",
+      "id": "construction",
+      "image": "/images/construction-project.jpg",
+      "introHeading": "Practical improvements. Built around your property.",
+      "label": "BUILD. IMPROVE. MAKE IT WORK.",
+      "number": "03",
+      "order": 2,
+      "services": [
+        {
+          "_key": "item-0",
+          "_type": "divisionService",
+          "description": "Patios, walkways, brickwork, and retaining walls that bring structure and function to your outdoor space.",
+          "name": "Hardscaping"
+        },
+        {
+          "_key": "item-1",
+          "_type": "divisionService",
+          "description": "Discuss water movement and drainage concerns so we can assess your property’s needs.",
+          "name": "Drainage solutions"
+        },
+        {
+          "_key": "item-2",
+          "_type": "divisionService",
+          "description": "Surfacing and resurfacing for tennis and pickleball courts, with a tailored approach for new playing surfaces and the renewal of existing courts.",
+          "name": "Sports Court Surfacing & Resurfacing"
+        }
+      ],
+      "slug": "construction",
+      "title": "Construction"
+    },
+    {
+      "_id": "division-fencing-access-control",
+      "_type": "serviceDivision",
+      "alt": "Driveway entrance gate with stone columns and privacy fencing",
+      "cardDescription": "Bring privacy, security, and convenient access to your property. Explore fencing, entry features, and sports field backstops tailored to your site.",
+      "description": "Define your boundaries and take control of how people enter your property. Our fencing and access control services help address privacy, security, and everyday access for homes and commercial sites, along with fencing and backstops for sports fields. We’ll talk through your goals, the layout of your property, and the entry features you need to find an approach that fits.",
+      "id": "fencing-access",
+      "image": "/images/fencing-project.jpg",
+      "introHeading": "Privacy, boundaries, and a better way in.",
+      "label": "PRIVACY. SECURITY. ACCESS.",
+      "number": "04",
+      "order": 3,
+      "services": [
+        {
+          "_key": "item-0",
+          "_type": "divisionService",
+          "alt": "Chain-link security fencing around industrial pipework",
+          "description": "Define your space and discuss the right privacy, boundary, and enclosure options.",
+          "image": "/images/fencing-detail-project.jpg",
+          "name": "Fencing",
+          "position": "center 55%"
+        },
+        {
+          "_key": "item-1",
+          "_type": "divisionService",
+          "alt": "Chain-link sliding entrance gate at a commercial property",
+          "description": "Discuss access to your property and the entry features that suit your needs.",
+          "image": "/images/access-control-project.jpg",
+          "name": "Access control",
+          "position": "center 50%"
+        },
+        {
+          "_key": "item-2",
+          "_type": "divisionService",
+          "alt": "Baseball field with tall backstop netting and perimeter fencing",
+          "description": "Fencing and backstops for sports fields, planned around your field’s layout and the way it’s used.",
+          "image": "/images/sports-field-fencing.jpg",
+          "name": "Sports Field Fencing & Backstops",
+          "position": "center 52%"
+        }
+      ],
+      "slug": "fencing-access-control",
+      "title": "Fencing & Access Control"
+    }
+  ],
+  "projects": [
+    {
+      "_id": "project-ranch-training-facility",
+      "_type": "project",
+      "active": true,
+      "category": "Fencing & Access Control",
+      "city": "Gray, LA",
+      "completed": "September 2026",
+      "description": "Mitch’s installed a 35-foot-tall backstop at The Ranch Training Facility, featuring 6-inch Schedule 40 posts, #36 nylon netting, and a wire rope support system. The installation provides ball containment behind home plate while maintaining clear sightlines across the training field.",
+      "order": 0,
+      "photos": [
+        {
+          "_key": "item-0",
+          "_type": "projectPhoto",
+          "alt": "Front view of the completed 35-foot backstop at The Ranch Training Facility",
+          "src": "/images/sports-field-fencing.jpg"
+        },
+        {
+          "_key": "item-1",
+          "_type": "projectPhoto",
+          "alt": "Completed backstop at The Ranch Training Facility viewed from the pitching area",
+          "src": "/images/ranch-training-facility/img_3435.jpg"
+        },
+        {
+          "_key": "item-2",
+          "_type": "projectPhoto",
+          "alt": "Side view of the backstop posts, netting, and support cables",
+          "src": "/images/ranch-training-facility/img_3430.jpg"
+        },
+        {
+          "_key": "item-3",
+          "_type": "projectPhoto",
+          "alt": "Close-up of backstop netting behind home plate",
+          "src": "/images/ranch-training-facility/img_3431.jpg"
+        },
+        {
+          "_key": "item-4",
+          "_type": "projectPhoto",
+          "alt": "Wide view of the backstop surrounding the home plate area",
+          "src": "/images/ranch-training-facility/img_3434.jpg"
+        },
+        {
+          "_key": "item-5",
+          "_type": "projectPhoto",
+          "alt": "Two people beside the completed backstop at The Ranch Training Facility",
+          "src": "/images/ranch-training-facility/img_3436.jpg"
+        }
+      ],
+      "propertyType": "Sports training facility",
+      "serviceSlug": "fencing-access-control",
+      "services": [
+        "Backstop installation"
+      ],
+      "slug": "ranch-training-facility",
+      "spotlight": true,
+      "title": "The Ranch Training Facility"
+    },
+    {
+      "_id": "project-laris-residence",
+      "_type": "project",
+      "active": true,
+      "category": "Design / Build",
+      "city": "Thibodaux, LA",
+      "completed": "October 2023",
+      "description": "A cohesive landscape installation featuring trees, shrubs, and ornamental grasses arranged to complement the home’s architecture. Defined bed edges and fresh mulch create a polished finish throughout the front landscape and courtyard.",
+      "order": 1,
+      "photos": [
+        {
+          "_key": "item-0",
+          "_type": "projectPhoto",
+          "alt": "Completed front landscaping at Laris Residence",
+          "src": "/images/laris-residence/photo-14.jpg"
+        },
+        {
+          "_key": "item-1",
+          "_type": "projectPhoto",
+          "alt": "Finished landscape beds around the curved entrance path",
+          "src": "/images/laris-residence/photo-13.jpg"
+        },
+        {
+          "_key": "item-2",
+          "_type": "projectPhoto",
+          "alt": "Completed courtyard planting beds around the central feature",
+          "src": "/images/laris-residence/photo-10.jpg"
+        },
+        {
+          "_key": "item-3",
+          "_type": "projectPhoto",
+          "alt": "Completed landscaping at the driveway entrance",
+          "src": "/images/laris-residence/photo-19.jpg"
+        },
+        {
+          "_key": "item-4",
+          "_type": "projectPhoto",
+          "alt": "Finished planting along the boundary wall",
+          "src": "/images/laris-residence/photo-16.jpg"
+        },
+        {
+          "_key": "item-5",
+          "_type": "projectPhoto",
+          "alt": "Wide view of the completed corner landscaping",
+          "src": "/images/laris-residence/photo-17.jpg"
+        },
+        {
+          "_key": "item-6",
+          "_type": "projectPhoto",
+          "alt": "New trees and planting beds beside the white boundary wall",
+          "src": "/images/laris-residence/photo-18.jpg"
+        },
+        {
+          "_key": "item-7",
+          "_type": "projectPhoto",
+          "alt": "Curved planting beds with shrubs and ornamental grasses",
+          "src": "/images/laris-residence/photo-15.jpg"
+        },
+        {
+          "_key": "item-8",
+          "_type": "projectPhoto",
+          "alt": "Mulched planting bed alongside the front walkway",
+          "src": "/images/laris-residence/photo-11.jpg"
+        },
+        {
+          "_key": "item-9",
+          "_type": "projectPhoto",
+          "alt": "New shrubs lining the entrance walkway",
+          "src": "/images/laris-residence/photo-12.jpg"
+        },
+        {
+          "_key": "item-10",
+          "_type": "projectPhoto",
+          "alt": "Newly planted beds beside the residence",
+          "src": "/images/laris-residence/photo-08.jpg"
+        },
+        {
+          "_key": "item-11",
+          "_type": "projectPhoto",
+          "alt": "Planting layout along the residence’s white boundary wall",
+          "src": "/images/laris-residence/photo-01.jpg"
+        },
+        {
+          "_key": "item-12",
+          "_type": "projectPhoto",
+          "alt": "Shrubs staged along the corner planting bed",
+          "src": "/images/laris-residence/photo-02.jpg"
+        },
+        {
+          "_key": "item-13",
+          "_type": "projectPhoto",
+          "alt": "Planting preparations beside the entrance walkway",
+          "src": "/images/laris-residence/photo-03.jpg"
+        },
+        {
+          "_key": "item-14",
+          "_type": "projectPhoto",
+          "alt": "Planting layout along the front of Laris Residence",
+          "src": "/images/laris-residence/photo-04.jpg"
+        },
+        {
+          "_key": "item-15",
+          "_type": "projectPhoto",
+          "alt": "Trees and ornamental grasses staged for planting",
+          "src": "/images/laris-residence/photo-05.jpg"
+        },
+        {
+          "_key": "item-16",
+          "_type": "projectPhoto",
+          "alt": "Front landscape beds before planting",
+          "src": "/images/laris-residence/photo-06.jpg"
+        },
+        {
+          "_key": "item-17",
+          "_type": "projectPhoto",
+          "alt": "Tree and shrub installation in progress",
+          "src": "/images/laris-residence/photo-07.jpg"
+        },
+        {
+          "_key": "item-18",
+          "_type": "projectPhoto",
+          "alt": "Courtyard planting work in progress",
+          "src": "/images/laris-residence/photo-09.jpg"
+        }
+      ],
+      "propertyType": "Residential",
+      "serviceSlug": "design-build",
+      "services": [
+        "Landscape Architecture",
+        "Design-Build"
+      ],
+      "slug": "laris-residence",
+      "spotlight": true,
+      "title": "Laris Residence"
+    },
+    {
+      "_id": "project-project-02",
+      "_type": "project",
+      "active": true,
+      "category": "Construction",
+      "description": "Project photos and details are coming soon.",
+      "order": 2,
+      "serviceSlug": "construction",
+      "slug": "project-02",
+      "spotlight": true,
+      "title": "Project coming soon"
+    },
+    {
+      "_id": "project-project-04",
+      "_type": "project",
+      "active": true,
+      "category": "Maintenance Services",
+      "description": "Project photos and details are coming soon.",
+      "order": 3,
+      "serviceSlug": "maintenance",
+      "slug": "project-04",
+      "title": "Project coming soon"
+    },
+    {
+      "_id": "project-project-05",
+      "_type": "project",
+      "active": true,
+      "category": "Design / Build",
+      "description": "Project photos and details are coming soon.",
+      "order": 4,
+      "serviceSlug": "design-build",
+      "slug": "project-05",
+      "title": "Project coming soon"
+    }
+  ],
+  "positions": [
+    {
+      "_id": "position-lawn-maintenance-crew-lead",
+      "_type": "position",
+      "active": true,
+      "division": "Lawn Maintenance",
+      "id": "lawn-maintenance-crew-lead",
+      "order": 0,
+      "title": "Lawn Maintenance Crew Lead"
+    },
+    {
+      "_id": "position-lawn-maintenance-technician",
+      "_type": "position",
+      "active": true,
+      "division": "Lawn Maintenance",
+      "id": "lawn-maintenance-technician",
+      "order": 1,
+      "title": "Lawn Maintenance Technician"
+    }
+  ]
+}

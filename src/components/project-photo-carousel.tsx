@@ -29,7 +29,7 @@ export default function ProjectPhotoCarousel({ photos }: { photos: Photo[] }) {
   return <section id="project-all-photos" className="project-photo-section photo-carousel" aria-labelledby={`${id}-heading`} aria-roledescription="carousel">
     <div className="project-photo-heading"><h2 id={`${id}-heading`}>More project photos</h2><div className="photo-carousel-controls"><button type="button" onClick={() => move(-1)} disabled={edges.start} aria-label="Previous photos" aria-controls={id}><ArrowLeft size={18} /></button><button type="button" onClick={() => move(1)} disabled={edges.end} aria-label="Next photos" aria-controls={id}><ArrowRight size={18} /></button></div></div>
     <div id={id} className="photo-carousel-track" ref={track} tabIndex={0} aria-label="Project photos; scroll horizontally for more" onKeyDown={event => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); move(event.key === "ArrowRight" ? 1 : -1); } }}>
-      {photos.map((photo, index) => <figure key={photo.src} role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${photos.length}`}><div className="photo-carousel-image"><Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 700px) 75vw, 300px" /></div></figure>)}
+      {photos.map((photo, index) => <figure key={photo.src} role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${photos.length}`}><div className="photo-carousel-image"><Image unoptimized={photo.src.startsWith('/api/media/')} src={photo.src} alt={photo.alt} fill sizes="(max-width: 700px) 75vw, 300px" /></div></figure>)}
     </div>
   </section>;
 }

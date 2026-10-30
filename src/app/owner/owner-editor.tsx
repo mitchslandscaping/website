@@ -9,6 +9,20 @@ async function api(path:string,body?:unknown){
  const response=await fetch(`/api/owner/${path}`,body===undefined?{cache:'no-store'}:{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
  const data=await response.json();if(!response.ok)throw Error(data.error||'Something went wrong. Please try again.');return data;
 }
+// Resize before upload to stay below the serverless request limit; never crop.
+async function resizeUpload(file:File):Promise<File>{
+ if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw Error('Choose a JPG, PNG, or WebP image.');
+ const bitmap=await createImageBitmap(file);
+ try{
+  const scale=Math.min(1,2400/Math.max(bitmap.width,bitmap.height));
+  const canvas=document.createElement('canvas');canvas.width=Math.round(bitmap.width*scale);canvas.height=Math.round(bitmap.height*scale);
+  const context=canvas.getContext('2d');if(!context)throw Error('Your browser could not prepare the photo.');
+  context.drawImage(bitmap,0,0,canvas.width,canvas.height);
+  const blob=await new Promise<Blob>((resolve,reject)=>canvas.toBlob(value=>value?resolve(value):reject(Error('Unable to prepare photo.')),'image/webp',0.85));
+  if(blob.size>3*1024*1024)throw Error('Please choose a smaller photo.');
+  return new File([blob],'website-photo.webp',{type:'image/webp'});
+ }finally{bitmap.close();}
+}
 function Field({label,children}: {label:string;children:React.ReactNode}){return <label className="own-field"><span>{label}</span>{children}</label>;}
 function move<T>(items:T[],index:number,offset:number){const result=[...items];const target=index+offset;if(target<0||target>=items.length)return result;[result[index],result[target]]=[result[target],result[index]];return result;}
 const slugify=(value:string)=>value.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,120);
@@ -40,7 +54,7 @@ export default function OwnerEditor({configured:initialConfigured,authenticated:
  function updateMember(index:number,fields:Partial<OwnerMember>){setMembers(values=>values.map((m,i)=>i===index?{...m,...fields}:m));changed();}
  async function upload(file:File){
   if(file.size>10*1024*1024)throw Error('Please choose an image smaller than 10 MB.');
-  const form=new FormData();form.set('file',file);const response=await fetch('/api/owner/upload',{method:'POST',body:form});const result=await response.json();if(!response.ok)throw Error(result.error||'The image could not be uploaded.');return result;
+  const form=new FormData();form.set('file',await resizeUpload(file));const response=await fetch('/api/owner/upload',{method:'POST',body:form});const result=await response.json();if(!response.ok)throw Error(result.error||'The image could not be uploaded.');return result;
  }
  async function memberPhoto(index:number,file?:File){if(!file)return;setBusy(true);setError('');try{const result=await upload(file);updateMember(index,{photo:result.url,photoUpload:result.image});}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
  async function projectPhotos(files:FileList|null){if(!files?.length||!selected)return;setBusy(true);setError('');const additions:OwnerPhoto[]=[];try{

@@ -1,6 +1,5 @@
 "use client";
 
-import { editAttribute } from '@/sanity/edit-attribute';
 import Image from "next/image";
 import ProjectCards from "./project-cards";
 import TeamMemberCard from "./team-member-card";

@@ -1,4 +1,4 @@
-import { getWebsiteContent } from "@/sanity/content";
+import { getWebsiteContent } from "@/lib/website-content";
 import ServicePageHeader from "@/components/service-page-header";
 import SiteFooter from "@/components/site-footer";
 import PortfolioArchive from "@/components/portfolio-archive";

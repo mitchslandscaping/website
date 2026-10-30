@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import ServicePageHeader from "@/components/service-page-header";
 import SiteFooter from "@/components/site-footer";
-import { getWebsiteContent } from "@/sanity/content";
+import { getWebsiteContent } from "@/lib/website-content";
 
 export const metadata: Metadata = {
   title: "Contact | Mitch’s Landscaping",

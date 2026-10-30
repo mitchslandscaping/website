@@ -1,5 +1,4 @@
-import { editAttribute } from '@/sanity/edit-attribute';
-import { getWebsiteContent } from "@/sanity/content";
+import { getWebsiteContent } from "@/lib/website-content";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
@@ -32,7 +31,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </header>
       <div className="case-feature">
         <figure className="case-spotlight">
-          {project.photos?.length ? <><div className="case-photo" data-sanity={editAttribute(project, "photos[0].srcUpload")}><Image src={project.photos[0].src} alt={project.photos[0].alt} fill priority sizes="(max-width: 850px) 100vw, 45vw" /></div></> : <div className="case-photo photo-pending"><ImageIcon size={34} strokeWidth={1.4} aria-hidden="true" /><span>Project photo coming soon</span></div>}
+          {project.photos?.length ? <><div className="case-photo"><Image unoptimized={project.photos[0].src.startsWith('/api/media/')} src={project.photos[0].src} alt={project.photos[0].alt} fill priority sizes="(max-width: 850px) 100vw, 45vw" /></div></> : <div className="case-photo photo-pending"><ImageIcon size={34} strokeWidth={1.4} aria-hidden="true" /><span>Project photo coming soon</span></div>}
         </figure>
         <aside className="case-brief" aria-labelledby="case-brief-heading">
           <h2 id="case-brief-heading">The project</h2>

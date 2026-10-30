@@ -2,7 +2,7 @@ import SiteFooter from "@/components/site-footer";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowUpRight, Camera, Trees, Shovel, Fence, Sprout } from "lucide-react";
-import { getWebsiteContent } from "@/sanity/content";
+import { getWebsiteContent } from "@/lib/website-content";
 import ServicePageHeader from "@/components/service-page-header";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {

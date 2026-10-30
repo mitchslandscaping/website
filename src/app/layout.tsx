@@ -2,7 +2,7 @@ import { isOwner } from '@/lib/owner/auth';
 import { draftMode } from "next/headers";
 import EditorPreview from "@/components/editor-preview";
 import WebsiteContentProvider from "@/components/website-content";
-import { getWebsiteContent } from "@/sanity/content";
+import { getWebsiteContent } from "@/lib/website-content";
 import QuoteProvider from "@/components/quote-provider";
 import type { Metadata, Viewport } from "next";
 import "@fontsource/poppins/latin-400.css";

@@ -10,7 +10,9 @@
     "owner:enroll": "node --env-file-if-exists=.env.local scripts/owner-enroll.mjs",
     "test:owner": "node --test scripts/owner-passkey.test.mjs",
     "owner:db:init": "node --env-file-if-exists=.env.local scripts/owner-db-init.mjs",
-    "test:owner:postgres": "node --test scripts/owner-postgres.test.mjs"
+    "test:owner:postgres": "node --test scripts/owner-postgres.test.mjs",
+    "test:owner:content": "node --test scripts/owner-content.test.mjs",
+    "test:owner:content:http": "node --test scripts/owner-content-http.test.mjs"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "^5.3.0",
@@ -18,18 +20,14 @@
     "@fontsource/plus-jakarta-sans": "^5.3.0",
     "@fontsource/poppins": "^5.3.0",
     "@fontsource/syne": "^5.3.0",
-    "@sanity/client": "^7.28.0",
-    "@sanity/image-url": "^2.1.1",
     "@simplewebauthn/browser": "^14.0.0",
     "@simplewebauthn/server": "^14.0.3",
     "lucide-react": "^1.62.0",
     "next": "^16.4.3",
-    "next-sanity": "^13.4.0",
     "postgres": "^4.0.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "sanity": "^5.31.2",
-    "styled-components": "^6.6.0",
+    "sharp": "^0.35.5",
     "zod": "^4.6.7"
   },
   "devDependencies": {
@@ -39,15 +37,6 @@
     "@types/react-dom": "^19.3.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2"
-  },
-  "overrides": {
-    "adm-zip": "^0.6.1",
-    "@vercel/frameworks": {
-      "js-yaml": "^3.15.2"
-    },
-    "typeid-js": {
-      "uuid": "^11.1.1"
-    }
   },
   "engines": {
     "node": "26.x"
