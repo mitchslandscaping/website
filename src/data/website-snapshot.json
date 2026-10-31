@@ -83,6 +83,22 @@
         "name": "Makenzie Hebert",
         "photo": "",
         "role": "Office Administrator"
+      },
+      {
+        "_key": "jean-pitre",
+        "_type": "teamMember",
+        "active": true,
+        "name": "Je’an Pitre",
+        "photo": "",
+        "role": "Access Control Manager"
+      },
+      {
+        "_key": "connor-mabile",
+        "_type": "teamMember",
+        "active": true,
+        "name": "Connor Mabile",
+        "photo": "",
+        "role": "Court Surfacing Manager"
       }
     ],
     "trustedBy": {

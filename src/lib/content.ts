@@ -66,6 +66,8 @@ export const site = {
     { name: "Marcelle Pate", role: "Landscape Designer", photo: "" },
     { name: "Kieran Pate", role: "Operations Manager", photo: "" },
     { name: "Makenzie Hebert", role: "Office Administrator", photo: "" },
+    { name: "Je’an Pitre", role: "Access Control Manager", photo: "" },
+    { name: "Connor Mabile", role: "Court Surfacing Manager", photo: "" },
   ] as { name: string; role: string; photo: string; active?: boolean; _key?: string }[],
   story: "",
   serviceAreas: [] as string[],
