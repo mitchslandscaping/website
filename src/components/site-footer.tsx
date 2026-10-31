@@ -14,6 +14,7 @@ export default function SiteFooter({ home = false }: { home?: boolean }) {
           <div className="site-footer-brand">
             <a href={home ? "#top" : "/"} aria-label="Mitch’s Landscaping home"><Image src={site.logo} alt="Mitch’s Landscaping" width={230} height={55} unoptimized /></a>
             <p>Serving our community since 1989.</p>
+            <p>Based in Larose, LA. Serving communities throughout Lafourche and Terrebonne parishes.</p>
           </div>
           <nav className="site-footer-links" aria-label="Footer company navigation">
             <h2>Company</h2>

@@ -1,3 +1,5 @@
+import { pageMetadata, serviceSeo, breadcrumbs, businessId, siteUrl } from '@/lib/seo';
+import StructuredData from '@/components/structured-data';
 import SiteFooter from "@/components/site-footer";
 import Image from "next/image";
 import HeroImage from "@/components/hero-image";
@@ -10,7 +12,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { serviceGroups } = await getWebsiteContent();
   const { slug } = await params;
   const group = serviceGroups.find((item) => item.slug === slug);
-  return { title: group ? `${group.title} | Mitch’s Landscaping` : "Service not found", description: group?.description };
+  if (!group) return { title: 'Service not found', robots: {index: false} };
+  const seo = serviceSeo[slug] ?? {title: `${group.title} | Mitch’s Landscaping`, description: group.description};
+  return pageMetadata(seo.title, seo.description, `/services/${slug}`);
 }
 const introductions: Record<string, string> = {
   maintenance: "Property care that keeps things looking their best.",
@@ -34,6 +38,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const Icon = slug === "maintenance" ? Trees : slug === "design-build" ? Sprout : slug === "construction" ? Shovel : Fence;
   return (
     <div className="division-page division-reference">
+      <StructuredData data={breadcrumbs([{name: 'Home', path: '/'}, {name: group.title, path: `/services/${slug}`}])} />
+      <StructuredData data={{'@context': 'https://schema.org', '@type': 'Service', name: group.title, description: group.description, url: `${siteUrl}/services/${slug}`, provider: {'@id': businessId}}} />
       <a className="skip-link" href="#division-main">Skip to content</a>
       <ServicePageHeader />
       <main id="division-main">

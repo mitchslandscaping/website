@@ -1,10 +1,11 @@
+import { pageMetadata } from '@/lib/seo';
 import { getWebsiteContent } from "@/lib/website-content";
 import ServicePageHeader from "@/components/service-page-header";
 import SiteFooter from "@/components/site-footer";
 import PortfolioArchive from "@/components/portfolio-archive";
 import ProjectCards from "@/components/project-cards";
 
-export const metadata = { title: "Portfolio | Mitch’s Landscaping" };
+export const metadata = pageMetadata('Landscaping & Fencing Projects | Mitch’s Landscaping', 'Explore completed landscape installations, fencing, and outdoor projects by Mitch’s Landscaping. See project photos, locations, and the work involved.', '/portfolio');
 export default async function PortfolioPage() {
   const { home } = await getWebsiteContent();
   return <div className="portfolio-page">

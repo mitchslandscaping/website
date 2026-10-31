@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from '@/lib/seo';
 import HeroImage from "@/components/hero-image";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import ServicePageHeader from "@/components/service-page-header";
 import SiteFooter from "@/components/site-footer";
 import { getWebsiteContent } from "@/lib/website-content";
 
-export const metadata: Metadata = {
-  title: "Contact | Mitch’s Landscaping",
-  description: "Talk with Mitch’s Landscaping about maintenance, design and build, construction, fencing, and access control for your property.",
-};
+export const metadata = pageMetadata('Contact Mitch’s Landscaping | Larose, LA', 'Call (985) 693-6354 or contact Mitch’s Landscaping at 13957 E Main St, Larose, LA. Office hours: Monday–Friday, 9 AM–4 PM.', '/contact');
 
 export default async function ContactPage() {
   const { site, office, home } = await getWebsiteContent();

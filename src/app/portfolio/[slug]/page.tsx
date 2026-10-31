@@ -1,3 +1,5 @@
+import { pageMetadata, breadcrumbs } from '@/lib/seo';
+import StructuredData from '@/components/structured-data';
 import { getWebsiteContent } from "@/lib/website-content";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { projects: portfolioProjects } = await getWebsiteContent();
   const { slug } = await params;
   const project = portfolioProjects.find(p => p.slug === (previousProjectSlugs[slug] ?? slug));
-  return { title: project ? `${project.title} | Mitch’s Landscaping` : "Project not found", description: project?.description };
+  if (!project) return {title: 'Project not found', robots: {index: false}};
+  return pageMetadata(`${project.title} | Mitch’s Landscaping`, project.description, `/portfolio/${project.slug}`);
 }
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { projects: portfolioProjects } = await getWebsiteContent();
@@ -22,6 +25,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!project) notFound();
   const additionalPhotos = project.photos?.slice(1) ?? [];
   return <div className="portfolio-page portfolio-project-page">
+    <StructuredData data={breadcrumbs([{name: 'Home', path: '/'}, {name: 'Portfolio', path: '/portfolio'}, {name: project.title, path: `/portfolio/${project.slug}`}])} />
     <a className="skip-link" href="#project-main">Skip to content</a>
     <ServicePageHeader />
     <main id="project-main" className="portfolio-detail project-clean project-standard container">
