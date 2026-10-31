@@ -23,6 +23,7 @@ import "./company.css";
 import "./quote.css";
 
 export const metadata: Metadata = {
+  verification: { google: "VehA_od9ctCxFYa79IY_OEJV8YTjHpWL1fMEBlgQ1L0" },
   title: "Mitch’s Landscaping | Landscape Fencing Construction",
   description:
     "Residential and commercial landscaping, lawn care, hardscaping, fencing, and drainage. Start your next outdoor project with a free estimate.",
